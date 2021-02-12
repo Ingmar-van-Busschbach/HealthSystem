@@ -14,7 +14,7 @@ public class HealthSystem : MonoBehaviour
 
     private void ApplyDamage(float damage = 0, GameObject target = null)
     {
-        if (target != this.gameObject) { return; // Ignore damage if target is not this gameObject
+        if (target != this.gameObject || _health <= 0) { return; // Ignore damage if target is not this gameObject
         }
         OnDamaged(damage);
         if (_health <= 0){
