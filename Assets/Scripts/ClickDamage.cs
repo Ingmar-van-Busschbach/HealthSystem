@@ -9,9 +9,8 @@ public class ClickDamage : DamageSystem
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("Fire1") && buttonPressed == false)
+        if (Input.GetButtonDown("Fire1"))
         {
-            buttonPressed = true;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
@@ -23,10 +22,6 @@ public class ClickDamage : DamageSystem
                     ApplyDamage(_damage, hit.transform.gameObject);
                 }
             }
-        }
-        if (!Input.GetButton("Fire1"))
-        {
-            buttonPressed = false;
         }
     }
 }
