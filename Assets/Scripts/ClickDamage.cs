@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class ClickDamage : DamageSystem
 {
-    [SerializeField] private bool buttonPressed = false;
-
     // Update is called once per frame
     void Update()
     {
